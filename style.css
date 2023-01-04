@@ -1,7 +1,80 @@
-html {
+:root {
   font-family: "Oxygen", sans-serif;
+  --primary-color: #0ea5e9;
+  --bg-color: #f1f5f9;
 }
 
 html img {
   height: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: var(--bg-color);
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 2fr;
+}
+
+.header {
+  height: 20vh;
+  grid-column: 2 / -1;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+.top-header,
+.bottom-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+
+.sidebar {
+  grid-row: 1 / -1;
+  background-color: var(--primary-color);
+  padding: 0 0 0 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-icons {
+  height: 20px;
+}
+
+.nav-item,
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.projects {
+  grid-column: 1 / 2;
+}
+
+.announcement {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.trending {
+  grid-area: 2 / 2 / 3 / 3;
 }
