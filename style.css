@@ -30,6 +30,7 @@ body {
   background-color: white;
   display: grid;
   grid-template-rows: 1fr 2fr;
+  box-shadow: 1px 5px #cbd5e1;
 }
 
 .top-header,
@@ -37,6 +38,86 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
+}
+
+.search-bar {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+input {
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 10px;
+  flex: 1;
+  height: 1rem;
+  padding: 0.5rem;
+}
+
+input:focus {
+  outline: #94a3b8;
+}
+
+.main-profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr 5fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-profile p {
+  font-weight: bold;
+}
+
+.welcome {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  justify-content: left;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.welcome-pic img {
+  height: 3.5rem;
+}
+
+.welcome-text {
+  line-height: 5px;
+}
+
+.welcome-text :first-child {
+  font-size: 0.75rem;
+}
+
+.welcome-text :first-child,
+:last-child {
+  font-weight: bolder;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  height: 1.75rem;
 }
 
 .sidebar {
@@ -57,7 +138,7 @@ body {
 }
 
 .logo img {
-  height: 4rem;
+  height: 3.5rem;
 }
 
 .nav-icons {
